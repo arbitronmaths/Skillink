@@ -1,0 +1,617 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #000000;
+    /* background-image: radial-gradient(circle at 30% 60%, rgba(128, 0, 255, 0.5), transparent 60%),
+                      radial-gradient(circle at 70% 40%, rgba(255, 0, 255, 0.5), transparent 60%),
+                      radial-gradient(circle at 50% 80%, rgba(75, 0, 130, 0.3), transparent 60%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    margin: 0; */
+    background-image: url('static/Screenshot 2024-11-06 135358.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    /* background-size: max(1400px, 100vw); */
+    position: relative;
+    /* background-position: sticky; */
+}
+
+.box1{
+    min-height: 100vh;
+}
+
+.navbar {
+    position: absolute;
+    bottom: 875px;
+    width: 100%;
+    max-width: 1400px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transform: scale(1.1);
+    animation: slide 0.5s ease-in forwards;
+    position: fixed;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    
+    
+    
+}
+
+@keyframes slide {
+    from {
+        top: -90px;
+        opacity: 0;
+    }
+    to {
+        top: 0px; /* Adjust based on desired end position */
+        opacity: 1;
+    }
+}
+
+
+
+.logo {
+    font-family: "Rowdies", sans-serif;
+    font-weight: 700;
+    font-style: bold;
+    font-size: 2.2em;
+    font-weight: bold;
+    color: #fff;
+    position: relative;
+    right: 120px;
+    top:15px;
+    color: #ffffff;
+    text-shadow: 0 0 10px #73078500, 0 0 20px rgb(193 177 200 / 47%);
+
+}
+
+.logo-highlight {
+    color: #d400ff;
+}
+
+.log2{
+    position: relative;
+    left: 72px;
+    bottom: 15.6px;
+}
+
+
+
+.nav-links a {
+    font-family: "Manrope", sans-serif;
+    color: blanchedalmond;
+    text-decoration: none;
+    margin: 0 11px;
+    font-size: 1.2em;
+    /* font-weight: bold; */
+    border: none;
+    border-radius: 15px;
+    padding: 8px 14px;
+    transition: all 0.3s;
+    position: relative;
+    right: -50px;
+}
+
+.nav-links a:hover{
+    color: #fff;
+    background-color: transparent;
+    color: burlywood
+    
+}
+
+
+.nav-links button{
+    font-family: "Manrope", sans-serif;
+    color: bisque;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.2em;
+    /* font-weight: bold; */
+    border: 2px solid white;
+    border-radius: 8px;
+    padding: 5px 15px;
+    transition: all 0.3s;
+    background-color: #50095e;
+    position: absolute;
+    right: -130px;
+    bottom: 41px;
+    
+}
+
+.nav-links button:hover{
+    color: #fff;
+    background-color: #50095e;
+    cursor: pointer;
+}
+
+form .nav-links1  button {
+    font-family: "Manrope", sans-serif;
+    color: blanchedalmond;
+    text-decoration: none;
+    background-color: transparent;
+    margin: 0 11px;
+    font-size: 1.1em;
+    /* font-weight: bold; */
+    border: none;
+    border-radius: 15px;
+    padding: 8px 14px;
+    transition: all 0.3s;
+    position: relative;
+    right: 118px;
+    top: 31px;
+    }
+    
+    form .nav-links1  button:hover{
+    color: #fff;
+    background-color: transparent;
+    color: burlywood;
+    }
+    
+    
+    form .nav-links2  button {
+        font-family: "Manrope", sans-serif;
+        color: bisque;
+        text-decoration: none;
+        margin: 0 15px;
+        font-size: 1.1em;
+        /* font-weight: bold; */
+        border: 2px solid white;
+        border-radius: 8px;
+        padding: 5px 15px;
+        transition: all 0.3s;
+        background-color: transparent;
+        position: absolute;
+        right: -188px;
+        bottom: 25px;
+        }
+        
+        form .nav-links2  button:hover{
+            color: #fff;
+            background-color: #50095e;
+            cursor: pointer;
+        }
+    
+
+
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    position: absolute;
+    box-shadow: #6a0dad;
+    animation: slide1 3s ease-in forwards;
+}
+
+@keyframes slide1 {
+    from {
+        top: 0px;
+        opacity: 0;
+    }
+    to {
+        top: 0px; /* Adjust based on desired end position */
+        opacity: 1;
+    }
+}
+
+.login-box {
+    background: #2e2e30;
+    padding: 2rem;
+    border-radius: 10px;
+    width: 340px;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(189, 4, 174, 0.2);
+    display: flex;
+    flex-direction: column;
+}
+
+.login-box h2 {
+    color: #ffffff;
+    margin-bottom: 1.6rem;
+    font-size:35px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.login-box label {
+    display: block;
+    font-size: 0.9rem;
+    color: #bbbbbb;
+    margin: 10px 0 5px;
+    text-align: left;
+}
+
+.login-box input[type="email"],
+.login-box input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 25px;
+    border: 1px solid #444;
+    border-radius: 5px;
+    background-color: #3a3a3c;
+    color: #e0e0e0;
+    font-size: 1rem;
+    outline: none;
+}
+
+.login-box input[type="email"]:focus,
+.login-box input[type="password"]:focus {
+    border-color: #6a0dad;
+}
+
+.forgot-password {
+    display: block;
+    font-size: 0.85rem;
+    color: #8888ff;
+    margin-bottom: 20px;
+    text-align: left;
+    text-decoration: none;
+}
+
+.forgot-password:hover {
+    color: #aa88ff;
+}
+
+.login-box button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #6a0dad;
+    color: #ffffff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.login-box button:hover {
+    background-color: #b612e8;
+}
+
+
+
+
+@media screen  and (max-width: 1799px)
+{
+    .navbar{
+        max-width: 1350px;
+    }
+    .hero{
+        transform: scale(0.9);   
+    }
+
+} 
+
+@media screen  and (max-width: 1740px)
+{
+    .navbar{
+        max-width: 1250px;
+    }
+    .hero{
+        transform: scale(0.9);   
+    }
+    .body{
+       background-attachment: fixed;
+
+    }
+}
+
+@media screen  and (max-width: 1648px)
+{
+    .navbar{
+        max-width: 1150px;
+    }
+    .steps{
+        transform: scale(1.2);
+    }
+    
+}
+
+@media screen  and (max-width: 1545px)
+{
+    .navbar{
+        max-width: 1100px;
+    }
+    .logo{
+        transform: scale(0.9);
+    }
+    .hero{
+        top: 300px;
+        transform: scale(0.8);
+    }
+
+}
+@media screen  and (max-width: 1490px)
+{
+    .navbar{
+        /* transform: scale(1.1); */
+        max-width: 1000px;
+    }
+    .nav-links a,.login-btn{
+        margin: 0 5px;
+    }
+    .hero{
+         
+        top: 300px;
+        transform: scale(0.6);
+        
+        
+    }
+
+}
+@media screen  and (max-width: 1379px)
+{
+    .navbar{
+        transform: scale(1.1);
+        max-width: 900px;
+    }
+    .nav-links a,.login-btn{
+        margin: 0 5px;
+    }
+    .hero{
+         /* top: 300px;  */
+         transform: scale(0.7);
+        position: fixed; 
+    }
+}
+    
+
+@media screen  and (max-width: 1310px)
+{
+    .navbar{
+        max-width: 850px;
+    }
+    .nav-links a,.login-btn{
+        margin: 0 2px;
+    }
+    .hero{
+        transform: scale(0.7);   
+    }
+    .steps{
+        transform: scale(0.9);
+    }
+    .hero{
+        top: 300px;
+        transform: scale(0.6);
+    }
+
+
+}
+
+@media screen  and (max-width: 1270px)
+{
+.navbar{
+max-width: 800px;
+}
+.nav-links a,.login-btn{
+margin: 0 2px;
+}
+.hero{
+transform: scale(0.7);   
+}
+.steps{
+transform: scale(1.1);
+}
+.hero{
+top: 300px;
+transform: scale(0.6);
+}
+
+
+}
+
+@media screen  and (max-width: 1136px)
+{
+.navbar{
+max-width: 600px;
+transform: scale(0.9);
+bottom: 887px;
+
+
+}
+.hero{
+bottom: 1200px;
+}
+.hero{
+/* top: 300px; */
+transform: scale(0.7);
+}
+.email-section{
+right: 240px;
+}
+}
+
+
+
+
+
+@media screen  and (max-width: 764px)
+{
+.navbar{
+max-width: 450px;
+bottom: 887px;
+}
+
+.hero{
+transform: scale(0.5);
+}
+.steps{
+display: flex;
+flex-direction: column;
+
+}
+.container h1{
+position: absolute;
+left: 40px;
+top: -120px;
+}
+.email-section{
+right: 240px;
+}
+.nav-links{
+gap: 6px;
+}
+}
+
+
+
+@media screen  and (max-width: 613px)
+{
+.navbar{
+    max-width: 420px;
+    bottom: 887px;
+}
+
+
+
+
+
+.container h1{
+transform: scale(1.4);
+}
+.hero{
+bottom: 1200px;
+transform: scale(0.5);
+}
+}
+
+@media screen  and (max-width: 400px)
+{
+.hero{
+top: 200px;
+transform: scale(0.5);
+}
+}
+
+@media screen  and (max-width: 588px)
+{
+    
+        .navbar{
+            max-width: 390px;
+            bottom: 887px;
+        }
+        
+        
+        
+        
+        
+        .container h1{
+        transform: scale(1.4);
+        }
+        .hero{
+        bottom: 1200px;
+        transform: scale(0.5);
+        }
+        
+
+}
+
+@media screen  and (max-width: 551px)
+{
+    
+        .navbar{
+            max-width: 390px;
+            bottom: 887px;
+            transform: scale(0.8);
+        }
+        
+        
+        
+        
+        
+       .login-container{
+        transform: scale(0.9);
+       }
+        
+
+}
+
+
+@media screen  and (max-width: 493px)
+{
+    
+        .navbar{
+            max-width: 390px;
+            bottom: 887px;
+            transform: scale(0.7);
+        }
+        
+        
+        
+        
+        
+        .container h1{
+        transform: scale(1.4);
+        }
+        .hero{
+        bottom: 1200px;
+        transform: scale(0.47);
+        }
+        
+
+}
+
+
+@media screen  and (max-width: 433px)
+{
+    
+        .navbar{
+            max-width: 340px;
+            bottom: 887px;
+            transform: scale(0.7);
+        }
+        .nav-links{
+            gap: 1px;
+        }
+        .login-container{
+            transform: scale(0.84);
+           }
+        
+        
+        
+        
+        
+        .container h1{
+        transform: scale(1.4);
+        }
+        .hero{
+        bottom: 1200px;
+        transform: scale(0.45);
+        }
+        
+
+}
+
+
+@media screen  and (max-width: 412px)
+{
+    
+        .navbar{
+            max-width: 340px;
+            bottom: 887px;
+            transform: scale(0.65);
+        }
+        .nav-links{
+            gap: 1px;
+        }
+        
+        
+        
+        
+        
+        .container h1{
+        transform: scale(1.3);
+        }
+        .hero{
+        bottom: 1200px;
+        transform: scale(0.4);
+        }
+        
+
+}

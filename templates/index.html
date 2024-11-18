@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Rowdies:wght@300;400;700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>SkillLink</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/index.css') }}">
+     <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        
+        
+        
+        /* Body styling */
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #000000;
+            /* background-image: radial-gradient(circle at 30% 60%, rgba(128, 0, 255, 0.5), transparent 60%),
+                              radial-gradient(circle at 70% 40%, rgba(255, 0, 255, 0.5), transparent 60%),
+                              radial-gradient(circle at 50% 80%, rgba(75, 0, 130, 0.3), transparent 60%);
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100vh;
+            margin: 0; */
+            background-image: url('static/Screenshot 2024-11-06 135358.png');
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            background-attachment: fixed;
+            transition: background-image 2s  ease-in-out;
+            /* background-size: max(1400px, 100vw); */
+            position: relative;
+            /* background-position: sticky; */
+        }
+        
+         .box1{
+            min-height: 100vh;
+        } 
+        
+        .fade-out {
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+        
+        .fade-in {
+            opacity: 1;
+            transition: opacity 0.5s ease;
+        }
+        
+        
+        
+        /* Navbar styling */
+        .navbar {
+            position: absolute;
+            bottom: 875px;
+            width: 100%;
+            max-width: 1400px;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transform: scale(1.1);
+            animation: slide 0.5s ease-in forwards;
+            position: fixed;
+            
+            
+            
+        }
+        
+        @keyframes slide {
+            from {
+                top: -90px;
+                opacity: 0;
+            }
+            to {
+                top: 0px; /* Adjust based on desired end position */
+                opacity: 1;
+            }
+        }
+        
+        
+        
+        .logo {
+            font-family: "Rowdies", sans-serif;
+            font-weight: 700;
+            font-style: bold;
+            font-size: 2.2em;
+            font-weight: bold;
+            color: #fff;
+            position: relative;
+            right: 120px;
+            top:15px;
+            color: #ffffff;
+            text-shadow: 0 0 10px #73078500, 0 0 20px rgb(193 177 200 / 47%);
+        
+        }
+        
+        .logo-highlight {
+            color: #d400ff;
+        }
+        
+        .log2{
+            position: relative;
+            left: 72px;
+            bottom: 15.6px;
+        }
+        
+        
+        
+        
+        .nav-links a {
+            font-family: "Manrope", sans-serif;
+            color: blanchedalmond;
+            text-decoration: none;
+            margin: 0 11px;
+            font-size: 1.2em;
+            /* font-weight: bold; */
+            border: none;
+            border-radius: 15px;
+            padding: 8px 14px;
+            transition: all 0.3s;
+            position: relative;
+            right: -50px;
+        }
+        
+        .nav-links a:hover{
+            color: #fff;
+            background-color: transparent;
+            color: burlywood
+            
+        }
+        
+        
+        .nav-links button{
+            font-family: "Manrope", sans-serif;
+            color: bisque;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.2em;
+            /* font-weight: bold; */
+            border: 2px solid white;
+            border-radius: 8px;
+            padding: 5px 15px;
+            transition: all 0.3s;
+            background-color: transparent;
+            position: absolute;
+            right: -306px;
+            bottom: 26px;
+            
+        }
+        
+        .nav-links button:hover{
+            color: #fff;
+            background-color: #50095e;
+            cursor: pointer;
+        }
+
+
+        form .nav-links1  button {
+            font-family: "Manrope", sans-serif;
+            color: blanchedalmond;
+            text-decoration: none;
+            background-color: transparent;
+            margin: 0 11px;
+            font-size: 1.1em;
+            /* font-weight: bold; */
+            border: none;
+            border-radius: 15px;
+            padding: 8px 14px;
+            transition: all 0.3s;
+            position: relative;
+            right: 118px;
+            top: 35px;
+            }
+            
+            form .nav-links1  button:hover{
+            color: #fff;
+            background-color: transparent;
+            color: burlywood;
+            }
+            
+            
+            form .nav-links2  button {
+                font-family: "Manrope", sans-serif;
+                color: bisque;
+                text-decoration: none;
+                margin: 0 15px;
+                font-size: 1.1em;
+                /* font-weight: bold; */
+                border: 2px solid white;
+                border-radius: 8px;
+                padding: 5px 15px;
+                transition: all 0.3s;
+                background-color: transparent;
+                position: absolute;
+                right: -204px;
+                bottom: 26px;
+                }
+                
+                form .nav-links2  button:hover{
+                    color: #fff;
+                    background-color: #50095e;
+                    cursor: pointer;
+                }
+            
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+            
+        h1 {
+            text-align: center;
+            font-size: 2.6em;
+            margin-bottom: 20px;
+            color: #fff;
+            position: relative;
+            top: -150px;
+            transform: scale(1.3);
+            white-space:nowrap;
+            
+        }
+        
+        .container {
+            text-align: center;
+            width: 500px;
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 10px;
+            transform: scale(1.2);
+            position: relative;
+            top: -100px;
+            
+            
+        
+        }
+        
+        
+        
+        .container label {
+            font-family: "Manrope", sans-serif;
+            font-weight: 500;
+            display: block;
+            font-size: 1.2em;
+            color: #ddd;
+            margin-bottom: 10px;
+        }
+        
+        .container input[type="file"] {
+            display: none; /* Hide the default file input */
+        }
+        
+        .custom-file-label {
+            font-family: "Manrope", sans-serif;
+            font-weight: 100;
+            display: inline-block;
+            background-color: #45097d;
+            color: white;
+            padding: 20px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.em;
+            transition: background-color 0.3s;
+            margin-bottom: 10px;
+            width: 40%;
+            position: relative;
+            right: -130px;
+            top: 30px;
+            border: 1px solid white;
+        }
+        
+        .custom-file-label:hover {
+            background-color: #2f0856;
+        }
+        #file-name {
+            font-family: "Manrope", sans-serif;
+            color: #ccc;
+            font-size: 1.1em;
+            margin-top: 5px;
+            /* font-style: italic; */
+            position: relative;
+            top: 50px;
+        
+        }
+        
+        .container button {
+            font-family: "Manrope", sans-serif;
+            background-color: #b504eb;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            width: 70%;
+            margin-top: 20px;
+            position: relative;
+            top: 200px;
+            right: -2px;
+            transform: scale(1.3);
+            white-space: nowrap;
+            font-weight: 500;
+        }
+        
+        .container button:hover {
+            background-color: #63098a;
+        }
+        
+        .note {
+            font-size: 0.8em;
+            color: #aaa;
+            margin-top: 10px;
+            position: relative;
+            top: 130px;
+        }
+
+
+@media screen  and (max-width: 1799px)
+{
+    .navbar{
+        max-width: 1350px;
+    }
+    
+
+} 
+
+@media screen  and (max-width: 1740px)
+{
+    .navbar{
+        max-width: 1250px;
+    }
+   
+}
+
+@media screen  and (max-width: 1648px)
+{
+    .navbar{
+        max-width: 1150px;
+    }
+    .steps{
+        transform: scale(1.2);
+    }
+    
+}
+
+@media screen  and (max-width: 1545px)
+{
+    .navbar{
+        max-width: 1100px;
+    }
+    h1{
+        transform: scale(1.1);
+        top: -41px;
+    }
+    .container{
+        transform: scale(1.1);
+        position: relative;
+        top:-21px;
+
+    }
+
+}
+@media screen  and (max-width: 1490px)
+{
+    .navbar{
+        /* transform: scale(1.1); */
+        max-width: 1000px;
+    }
+    .nav-links a,.login-btn{
+        margin: 0 5px;
+    }
+    .hero{
+         
+        top: 300px;
+        transform: scale(0.6);
+        
+        
+    }
+
+}
+@media screen  and (max-width: 1379px)
+{
+    .navbar{
+        transform: scale(1.1);
+        max-width: 900px;
+    }
+    .nav-links a,.login-btn{
+        margin: 0 5px;
+    }
+    .hero{
+         /* top: 300px;  */
+         transform: scale(0.7);
+        position: fixed; 
+    }
+}
+    
+
+@media screen  and (max-width: 1270px)
+{
+    .navbar{
+        max-width: 800px;
+    }
+    .nav-links a,.login-btn{
+        margin: 0 2px;
+    }
+    .hero{
+        transform: scale(0.7);   
+    }
+    .steps{
+        transform: scale(0.9);
+    }
+    .hero{
+        top: 300px;
+        transform: scale(0.6);
+    }
+
+
+}
+
+@media screen  and (max-width: 1136px)
+{
+.navbar{
+max-width: 600px;
+transform: scale(0.9);
+bottom: 887px;
+
+
+}
+.hero{
+bottom: 1200px;
+}
+.hero{
+/* top: 300px; */
+transform: scale(0.7);
+}
+.email-section{
+right: 240px;
+}
+}
+
+
+
+
+
+@media screen  and (max-width: 764px)
+{
+.navbar{
+max-width: 450px;
+bottom: 887px;
+}
+
+.hero{
+transform: scale(0.5);
+}
+.steps{
+display: flex;
+flex-direction: column;
+
+}
+.container h1{
+position: absolute;
+left: 40px;
+top: -120px;
+}
+.email-section{
+right: 240px;
+}
+.nav-links{
+gap: 6px;
+}
+
+.container{
+    transform:scale(0.7);
+    top:-128px;
+}
+h1{
+    transform:scale(0.7);
+    top:-79px;
+    
+}
+}
+
+
+
+@media screen  and (max-width: 613px)
+{
+.navbar{
+    max-width: 420px;
+    bottom: 887px;
+}
+
+
+
+
+
+.container h1{
+transform: scale(1.4);
+}
+.hero{
+bottom: 1200px;
+transform: scale(0.5);
+}
+}
+
+@media screen  and (max-width: 400px)
+{
+.hero{
+top: 200px;
+transform: scale(0.5);
+}
+}
+
+@media screen  and (max-width: 588px)
+{
+    
+        .navbar{
+            max-width: 390px;
+            bottom: 887px;
+        }
+        
+        
+        
+        
+        
+        .container h1{
+        transform: scale(1.4);
+        }
+        .hero{
+        bottom: 1200px;
+        transform: scale(0.5);
+        }
+        
+
+}
+
+@media screen  and (max-width: 551px)
+{
+    
+        .navbar{
+            max-width: 390px;
+            bottom: 887px;
+            transform: scale(0.8);
+        }
+        
+        
+        
+        
+        
+       .login-container{
+        transform: scale(0.9);
+       }
+        
+
+}
+
+
+@media screen  and (max-width: 493px)
+{
+    
+        .navbar{
+            max-width: 390px;
+            bottom: 887px;
+            transform: scale(0.7);
+        }
+        
+        
+        
+        
+        
+        .container h1{
+        transform: scale(1.4);
+        }
+        .hero{
+        bottom: 1200px;
+        transform: scale(0.47);
+        }
+        
+
+}
+
+
+@media screen  and (max-width: 433px)
+{
+    
+        .navbar{
+            max-width: 340px;
+            bottom: 887px;
+            transform: scale(0.7);
+        }
+        .nav-links{
+            gap: 1px;
+        }
+        .login-container{
+            transform: scale(0.84);
+           }
+        
+        
+        
+        
+        
+        .container h1{
+        transform: scale(1.4);
+        }
+        .hero{
+        bottom: 1200px;
+        transform: scale(0.45);
+        }
+        
+
+}
+
+
+@media screen  and (max-width: 412px)
+{
+    
+        .navbar{
+            max-width: 340px;
+            bottom: 887px;
+            transform: scale(0.65);
+        }
+        .nav-links{
+            gap: 1px;
+        }
+        
+        
+        
+        
+        
+        .container h1{
+        transform: scale(1.3);
+        }
+        .hero{
+        bottom: 1200px;
+        transform: scale(0.4);
+        }
+        
+
+}
+
+     </style>
+
+   
+
+</head>
+<body>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const fileInput = document.getElementById("resume");
+            const selectFileButton = document.getElementById("selectFileButton");
+            const fileNameDisplay = document.getElementById("file-name");
+
+            // Prevent double triggering of the file dialog by only using the custom button
+            selectFileButton.addEventListener("click", function(event) {
+                event.preventDefault(); // Prevent default action of button
+                fileInput.click(); // Trigger the file input
+            });
+
+            // Display the selected file name
+            fileInput.addEventListener("change", function() {
+                const fileName = fileInput.files.length > 0 ? fileInput.files[0].name : "No file chosen";
+                fileNameDisplay.textContent = fileName;
+            });
+        });
+        
+    </script>
+    
+    <div class="navbar">
+        <div class="logo">
+            <div class="log">SKI<span class="logo-highlight">L</span>
+                <div class="log2"><span class="logo-highlight">L</span>INK</div>   
+            </div>
+        </div>
+       
+        <div class="nav-links">
+            <form  action="/Home" method="POST">
+                <a class="nav-links1" href="front.html"><button>Home</button></a>
+            </form>
+            <a href="#">About Us</a>
+            <form  action="/login" method="POST">
+                <a class="nav-links2" href="login.html"><button>Login</button></a>
+            </form>
+        </div>
+    </div>
+    
+    <div class="line"></div>
+    
+    
+
+    <h1>Upload Your Resume</h1>
+    <div class="container">
+        <form action="/predict" method="POST" enctype="multipart/form-data">
+            <label for="resume">Select your resume (PDF only):</label>
+            <label for="resume" class="custom-file-label"  id="selectFileButton">Choose file</label>
+            <input type="file" name="resume" id="resume" accept=".pdf" required>
+            <p id="file-name" class="file-name">no file chosen</p>
+            <p class="note">*Resume must be uploaded in PDF format.</p>
+            <button type="submit">Predict Job Role and Suggest Courses</button>
+        </form>
+    </div>
+
+</body>
+
+</div>
+</div>
+
+</html>

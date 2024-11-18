@@ -1,0 +1,272 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+
+
+/* Body styling */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #000000;
+    /* background-image: radial-gradient(circle at 30% 60%, rgba(128, 0, 255, 0.5), transparent 60%),
+                      radial-gradient(circle at 70% 40%, rgba(255, 0, 255, 0.5), transparent 60%),
+                      radial-gradient(circle at 50% 80%, rgba(75, 0, 130, 0.3), transparent 60%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    margin: 0; */
+    background-image: url('static/Screenshot 2024-11-06 135358.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    transition: background-image 2s  ease-in-out;
+    /* background-size: max(1400px, 100vw); */
+    position: relative;
+    /* background-position: sticky; */
+}
+
+/* .box1{
+    min-height: 100vh;
+} */
+
+.fade-out {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.fade-in {
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+
+
+/* Navbar styling */
+.navbar {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    max-width: 1400px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transform: scale(1.1);
+    animation: slide 0.5s ease-in forwards;
+    position: fixed;
+    
+    
+    
+}
+
+@keyframes slide {
+    from {
+        top: -90px;
+        opacity: 0;
+    }
+    to {
+        top: 0px; /* Adjust based on desired end position */
+        opacity: 1;
+    }
+}
+
+
+
+.logo {
+    font-family: "Rowdies", sans-serif;
+    font-weight: 700;
+    font-style: bold;
+    font-size: 2.2em;
+    font-weight: bold;
+    color: #fff;
+    position: relative;
+    right: 120px;
+    top:15px;
+    color: #ffffff;
+    text-shadow: 0 0 10px #73078500, 0 0 20px rgb(193 177 200 / 47%);
+
+}
+
+.logo-highlight {
+    color: #d400ff;
+}
+
+.log2{
+    position: relative;
+    left: 72px;
+    bottom: 15.6px;
+}
+
+
+
+
+.nav-links a {
+    font-family: "Manrope", sans-serif;
+    color: blanchedalmond;
+    text-decoration: none;
+    margin: 0 11px;
+    font-size: 1.2em;
+    /* font-weight: bold; */
+    border: none;
+    border-radius: 15px;
+    padding: 8px 14px;
+    transition: all 0.3s;
+    position: relative;
+    right: -50px;
+}
+
+.nav-links a:hover{
+    color: #fff;
+    background-color: transparent;
+    color: burlywood
+    
+}
+
+
+.nav-links button{
+    font-family: "Manrope", sans-serif;
+    color: bisque;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.2em;
+    /* font-weight: bold; */
+    border: 2px solid white;
+    border-radius: 8px;
+    padding: 5px 15px;
+    transition: all 0.3s;
+    background-color: transparent;
+    position: absolute;
+    right: -130px;
+    bottom: 41px;
+    
+}
+
+.nav-links button:hover{
+    color: #fff;
+    background-color: #50095e;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+h1 {
+    text-align: center;
+    font-size: 2.6em;
+    margin-bottom: 20px;
+    color: #fff;
+    position: relative;
+    top: -150px;
+    transform: scale(1.3);
+    
+}
+
+.container {
+    text-align: center;
+    width: 500px;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 10px;
+    transform: scale(1.2);
+    position: relative;
+    top: -100px;
+    
+    
+
+}
+
+
+
+.container label {
+    font-family: "Manrope", sans-serif;
+    font-weight: 500;
+    display: block;
+    font-size: 1.2em;
+    color: #ddd;
+    margin-bottom: 10px;
+}
+
+.container input[type="file"] {
+    display: none; /* Hide the default file input */
+}
+
+.custom-file-label {
+    font-family: "Manrope", sans-serif;
+    font-weight: 100;
+    display: inline-block;
+    background-color: #45097d;
+    color: white;
+    padding: 20px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.em;
+    transition: background-color 0.3s;
+    margin-bottom: 10px;
+    width: 40%;
+    position: relative;
+    right: -130px;
+    top: 30px;
+    border: 1px solid white;
+}
+
+.custom-file-label:hover {
+    background-color: #2f0856;
+}
+#file-name {
+    font-family: "Manrope", sans-serif;
+    color: #ccc;
+    font-size: 1.1em;
+    margin-top: 5px;
+    /* font-style: italic; */
+    position: relative;
+    top: 50px;
+
+}
+
+.container button {
+    font-family: "Manrope", sans-serif;
+    background-color: #b504eb;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 70%;
+    margin-top: 20px;
+    position: relative;
+    top: 200px;
+    right: -2px;
+    transform: scale(1.1);
+    white-space: nowrap;
+}
+
+.container button:hover {
+    background-color: #63098a;
+}
+
+.note {
+    font-size: 0.8em;
+    color: #aaa;
+    margin-top: 10px;
+    position: relative;
+    top: 130px;
+}

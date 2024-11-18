@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Rowdies:wght@300;400;700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillLink</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}">
+    <script src="{{ url_for('static',filename='css/main.js') }}"></script>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #000000;
+            /* background-image: radial-gradient(circle at 30% 60%, rgba(128, 0, 255, 0.5), transparent 60%),
+                              radial-gradient(circle at 70% 40%, rgba(255, 0, 255, 0.5), transparent 60%),
+                              radial-gradient(circle at 50% 80%, rgba(75, 0, 130, 0.3), transparent 60%);
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100vh;
+            margin: 0; */
+            background-image: url('static/Screenshot 2024-11-06 135358.png');
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            background-attachment: fixed;
+            transition: background-image 2s  ease-in-out;
+            /* background-size: max(1400px, 100vw); */
+            position: relative;
+            /* background-position: sticky; */
+        }
+        
+
+    </style>
+    
+    
+    
+
+</head>
+<body >
+    
+       <div class="navbar">
+        <div class="logo">
+            <div class="log">SKI<span class="logo-highlight">L</span>
+                <div class="log2"><span class="logo-highlight">L</span>INK
+                </div>   
+            </div>
+        </div>
+       
+        <div class="nav-links">
+            <form  action="/Home" method="POST">
+                <a class="nav-links1" href="front.html"><button>Home</button></a>
+            </form>
+            <a href="#">About Us</a>
+            <form  action="/login" method="POST">
+                <a class="nav-links2" href="login.html"><button>Login</button></a>
+            </form>
+        </div>
+        
+       </div>
+       
+       <div class="line">
+        
+       </div>
+       
+    
+       <div class="hero reveal2">
+        <h1><span class="highlight-text">Skill&nbsp;</span> it up.</h1>
+        <p class="description1">Upload your resume for a personalized skill analysis and tailored resource </p>
+        <p class="description2"> recommendations to enhance your expertise..</p>
+        
+        <!-- Email Input Section -->
+        <div class="email-section reveal1">
+            <input  style="--clr: #720e8b" class="system" type="email" placeholder="E-Mail Address">
+            <button class="get-started">Get Started</button>
+        </div>
+    </div>
+    
+</div>
+
+
+
+    <div class="container reveal">
+        <h1>How to Upskill</h1>
+        <div class="steps">
+            <div style="--clr: #4e0860" class="step1">
+                <div class="icon">
+                    <img src="static/file-pdf-line.svg" alt="PDF Icon">
+                </div>
+                 <!-- <button onclick="window.location.href='index.html'">Upload your Resume. </button> -->
+                 <form action="/upload" method="POST">
+                    <a href="index.html"><button>Upload your Resume</button></a> 
+                <form/>
+            </div>
+            <div style="--clr: #521462" class="step2">
+                <div class="icon">
+                    <img src="static/line-chart-line.svg" alt="Analyze Icon">
+                </div>
+                <button>Analyse your Skillset. </button>
+            </div>
+            <div style="--clr: #470f88;" class="step3">
+                <div class="icon">
+                    <img src="static/database-line.svg" alt="Reso Icon">
+                </div>
+                <button>Get essential resources. </button>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    
+
+
+
+
+</body>
+
+</html>
